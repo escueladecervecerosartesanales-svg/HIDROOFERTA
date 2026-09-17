@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paquete de Cursos de Hidromiel — $1,000 MXN | Escuela de Cerveceros Artesanales</title>
+<meta name="description" content="Domina el arte de la hidromiel: 5 clases completas + adjuntos. Precio especial $1,000 MXN. Paga por depósito BBVA, CLABE o PayPal.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600..900;1,600..900&family=Inter:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000000; --gold:#f2c14e; --gold2:#ffe08a; --soft:#e6d3a3; --dim:#a58a55;
+  --line:rgba(242,193,78,.22); --ok:#b7d97e; --err:#ff7b6b; --wa:#25d366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--soft);background:#000;line-height:1.6}
+::selection{background:rgba(242,193,78,.35)}
+h1,h2,h3{font-family:Fraunces,serif;color:#f6d67a;line-height:1.1}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  h1,h2{background:linear-gradient(115deg,#ffe9a8,#f2c14e 48%,#cd972f);-webkit-background-clip:text;background-clip:text;color:transparent}
+}
+h1{font-size:clamp(32px,5vw,58px);font-weight:900}
+h2{font-size:clamp(24px,3.4vw,40px);font-weight:800}
+h1 em,h2 em{font-style:italic;color:var(--gold2)}
+strong,b{color:var(--gold2)}
+.center{text-align:center}
+img{max-width:100%;display:block}
+
+/* ===== HEADER ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 20px}
+.brand{display:flex;align-items:center;gap:12px}
+.hexlogo{width:40px;height:44px;display:grid;place-items:center;font-size:20px;flex:none;
+  background:linear-gradient(160deg,#ffdf8e,#c9932e);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.brand-txt strong{display:block;font-size:13.5px;color:var(--gold2);letter-spacing:.04em}
+.brand-txt small{display:block;font-size:10px;color:var(--dim);letter-spacing:.14em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;font-family:inherit;
+  background:linear-gradient(160deg,#ffdf8e,#f2b13c 45%,#d69220);color:#221502;font-weight:800;border:none;
+  border-radius:14px;padding:13px 22px;font-size:15px;text-decoration:none;transition:.2s;
+  box-shadow:0 10px 24px -8px rgba(242,177,60,.5),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn:active{transform:scale(.98)}
+.btn.ghost{background:rgba(242,193,78,.07);color:var(--gold);border:1.5px solid rgba(242,193,78,.4);box-shadow:none}
+.btn.ghost:hover{background:rgba(242,193,78,.14)}
+.btn.xl{padding:16px 28px;font-size:16.5px;border-radius:16px}
+.btn.wa{background:linear-gradient(160deg,#3ee577,#1faf52);color:#06290f;box-shadow:0 10px 24px -8px rgba(37,211,102,.5),inset 0 1px 0 rgba(255,255,255,.4)}
+.btn.wa:hover{filter:brightness(1.07)}
+.btn.pp{background:linear-gradient(160deg,#ffffff,#dfe9f5);color:#003087;box-shadow:0 10px 24px -8px rgba(0,112,224,.45),inset 0 1px 0 rgba(255,255,255,.6)}
+.btn.sm{padding:9px 15px;font-size:13px;border-radius:10px}
+
+/* ===== SECCIONES ===== */
+section{padding:74px 20px}
+.wrap{max-width:1120px;margin:auto}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.22em;font-weight:800;color:var(--gold);text-transform:uppercase}
+.kicker::before{content:'';width:26px;height:2px;background:var(--gold)}
+.kicker.center{justify-content:center}
+.lead{font-size:clamp(15px,1.6vw,17px);color:var(--soft);max-width:700px;line-height:1.7}
+.lead.center{margin-left:auto;margin-right:auto}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== HERO ===== */
+.hero{padding-top:56px;padding-bottom:64px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:800;letter-spacing:.14em;color:#ffd97a;
+  border:1px dashed rgba(242,193,78,.55);background:rgba(242,193,78,.07);padding:9px 16px;border-radius:999px;margin-bottom:20px}
+.price-hero{display:flex;align-items:baseline;gap:8px;margin:22px 0 6px}
+.price-hero b{font-family:Fraunces,serif;font-size:clamp(52px,7vw,84px);color:var(--gold2);line-height:1;
+  text-shadow:0 0 40px rgba(242,193,78,.25)}
+.price-hero small{font-weight:800;color:var(--dim);font-size:20px}
+.strike{color:var(--dim);text-decoration:line-through;font-size:16px;margin-left:12px}
+.countdown{display:flex;align-items:center;gap:8px;margin:18px 0 8px;flex-wrap:wrap}
+.cd-cell{background:rgba(0,0,0,.55);border:1px solid rgba(242,193,78,.45);border-radius:10px;padding:9px 13px;text-align:center;min-width:64px}
+.cd-cell b{display:block;font-family:Fraunces,serif;font-size:27px;color:var(--gold2)}
+.cd-cell small{font-size:9.5px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+.cd-sep{color:var(--gold);font-weight:800;font-size:22px}
+.urgency{color:#ffa07a;font-weight:800;font-size:14.5px;animation:softPulse 2s infinite}
+@keyframes softPulse{50%{opacity:.55}}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.imgbox{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 40px 90px -24px rgba(242,177,60,.28),0 30px 60px -20px rgba(0,0,0,.7)}
+.imgbox img{width:100%;height:auto}
+.tilt{transition:transform .4s}
+.tilt:hover{transform:rotate(-1.4deg) scale(1.02)}
+
+/* ===== INCLUYE ===== */
+.includes{background:linear-gradient(180deg,#050300,#000)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.card{background:linear-gradient(165deg,rgba(242,193,78,.09),rgba(242,193,78,.02));border:1px solid var(--line);border-radius:18px}
+.class-card{padding:26px 22px;position:relative;transition:.25s}
+.class-card:hover{transform:translateY(-5px);border-color:rgba(242,193,78,.55);box-shadow:0 20px 44px -18px rgba(242,177,60,.25)}
+.class-num{position:absolute;top:18px;right:20px;font-family:Fraunces,serif;font-size:30px;color:rgba(242,193,78,.35);font-weight:700}
+.class-ico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:26px;margin-bottom:14px;
+  background:rgba(242,193,78,.1);border:1.5px solid rgba(242,193,78,.3)}
+.class-card h3{font-size:18px;margin-bottom:8px;color:var(--gold2)}
+.class-card p{font-size:14px;color:var(--dim);line-height:1.6}
+
+/* ===== BENEFICIOS ===== */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.trust-item{display:flex;gap:13px;align-items:center;padding:18px 16px}
+.trust-item .t-ico{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;font-size:21px;
+  background:rgba(242,193,78,.1);border:1.5px solid rgba(242,193,78,.3)}
+.trust-item b{display:block;font-size:14px;color:var(--gold2)}
+.trust-item small{font-size:12px;color:var(--dim);line-height:1.45;display:block}
+
+/* ===== PAGO ===== */
+.pago{background:linear-gradient(180deg,#000,#050300 60%,#000)}
+.pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.pay-card{padding:26px 22px;display:flex;flex-direction:column;gap:12px}
+.pay-card.featured{border-color:rgba(242,193,78,.5);background:linear-gradient(165deg,rgba(242,193,78,.13),rgba(242,193,78,.03))}
+.pay-ico{font-size:30px}
+.pay-card h3{font-size:17px;color:var(--gold2)}
+.pay-label{font-size:10.5px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase;font-weight:800}
+.pay-num{font-family:'Courier New',monospace;font-size:19px;font-weight:700;color:#fff;letter-spacing:.06em;
+  background:rgba(0,0,0,.5);border:1px solid var(--line);border-radius:10px;padding:12px 14px;word-break:break-all}
+.pay-meta{font-size:13px;color:var(--soft)}
+.copy-row{display:flex;gap:8px;margin-top:auto}
+.copy-btn{flex:1;background:rgba(242,193,78,.1);border:1.5px solid rgba(242,193,78,.4);color:var(--gold);
+  font:inherit;font-weight:800;font-size:13px;padding:10px 12px;border-radius:10px;cursor:pointer;transition:.2s}
+.copy-btn:hover{background:rgba(242,193,78,.2)}
+.copy-btn.copied{background:rgba(183,217,126,.15);border-color:var(--ok);color:var(--ok)}
+.holder{margin-top:10px;padding:11px 14px;background:rgba(242,193,78,.06);border:1px dashed rgba(242,193,78,.35);
+  border-radius:10px;font-size:13.5px;text-align:center}
+.pay-note{margin-top:22px;font-size:13.5px;color:var(--dim);background:rgba(232,160,32,.07);border:1px solid rgba(232,160,32,.3);
+  padding:14px 18px;border-radius:12px;line-height:1.6}
+
+/* ===== PASOS ===== */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.step{padding:24px;text-align:center}
+.step .s-num{width:44px;height:44px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;
+  font-family:Fraunces,serif;font-size:21px;font-weight:800;color:#241503;background:linear-gradient(160deg,#ffdf8e,#e8a020)}
+.step h3{font-size:16.5px;margin-bottom:7px;color:var(--gold2)}
+.step p{font-size:13.5px;color:var(--dim);line-height:1.6}
+
+/* ===== WHATSAPP ===== */
+.wa-box{max-width:760px;margin:36px auto 0;padding:34px 30px;text-align:center}
+.wa-phone{font-family:Fraunces,serif;font-size:clamp(30px,4.5vw,42px);color:var(--gold2);letter-spacing:.03em;display:block;margin:8px 0 4px}
+.wa-send{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}
+.wa-send div{padding:18px 12px;background:rgba(37,211,102,.06);border:1.5px solid rgba(37,211,102,.3);border-radius:14px}
+.wa-send .w-ico{font-size:28px;display:block;margin-bottom:8px}
+.wa-send b{display:block;font-size:14px;color:var(--gold2);margin-bottom:4px}
+.wa-send small{font-size:12px;color:var(--dim);line-height:1.45;display:block}
+.wa-note{font-size:13px;color:var(--dim);margin-top:14px}
+
+/* ===== BANNER FINAL ===== */
+.final-banner{padding:60px 24px;text-align:center;background:linear-gradient(160deg,rgba(242,193,78,.14),rgba(242,193,78,.03));
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.final-banner h2{font-size:clamp(22px,3vw,34px);max-width:820px;margin:0 auto 10px}
+
+footer{padding:34px 20px;text-align:center;color:var(--dim);font-size:12.5px}
+footer .f-brand{color:var(--gold2);font-weight:800;font-size:13.5px;margin-bottom:6px}
+
+#toasts{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;gap:8px;z-index:300;align-items:center;pointer-events:none}
+.toast{background:#191002;border:1px solid rgba(242,193,78,.5);color:var(--gold2);padding:12px 22px;border-radius:12px;
+  font-size:14px;font-weight:600;box-shadow:0 16px 40px rgba(0,0,0,.6);animation:toastIn .35s;white-space:nowrap}
+.toast.out{animation:toastOut .4s forwards}
+@keyframes toastIn{from{transform:translateY(14px);opacity:0}}
+@keyframes toastOut{to{transform:translateY(10px);opacity:0}}
+
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .grid-3,.pay-grid,.steps{grid-template-columns:1fr 1fr}
+  .trust{grid-template-columns:1fr 1fr}
+  .hero{padding-top:40px}
+}
+@media(max-width:640px){
+  section{padding:52px 16px}
+  .grid-3,.pay-grid,.steps,.trust,.wa-send{grid-template-columns:1fr}
+  .brand-txt small{display:none}
+  .nav .btn{padding:10px 14px;font-size:13px}
+  .strike{display:block;margin:4px 0 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <span class="hexlogo">🍯</span>
+      <div class="brand-txt">
+        <strong>ESCUELA DE CERVECEROS ARTESANALES</strong>
+        <small>CAPACITACIÓN · CIENCIA · PASIÓN</small>
+      </div>
+    </div>
+    <a class="btn sm" href="#pago">💳 Métodos de pago</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="badge">🔥 PRECIO ESPECIAL PARA ASISTENTES DEL WEBINAR</span>
+      <h1>Paquete de Cursos<br><em>Hidromiel</em></h1>
+      <p class="lead" style="margin-top:14px">Domina el arte de la hidromiel: conocimiento, técnica y recetas para crear hidromieles extraordinarias. Aprende de forma completa, práctica y a tu ritmo.</p>
+      <div class="price-hero"><b>$1,000</b><small>MXN</small><span class="strike">Precio normal: $2,500</span></div>
+      <p class="urgency">⏰ Oferta válida solo hasta las 10:30 PM de hoy</p>
+      <div class="countdown" aria-label="Tiempo restante de la oferta">
+        <div class="cd-cell"><b id="cdH">04</b><small>horas</small></div><span class="cd-sep">:</span>
+        <div class="cd-cell"><b id="cdM">12</b><small>min</small></div><span class="cd-sep">:</span>
+        <div class="cd-cell"><b id="cdS">09</b><small>seg</small></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn xl" href="#pago">💳 Pagar ahora</a>
+        <a class="btn xl wa" href="https://wa.me/524921344124?text=Hola!%20Quiero%20inscribirme%20al%20Paquete%20de%20Cursos%20de%20Hidromiel%20(%241%2C000%20MXN)." target="_blank" rel="noopener">💬 Inscribirme por WhatsApp</a>
+      </div>
+    </div>
+    <div class="reveal in" style="transition-delay:.12s">
+      <div class="imgbox tilt">
+        <img src="https://i.postimg.cc/wxGR63jg/Chat-GPT-Image-12-sept-2026-13-32-55.png" alt="Paquete de cursos de hidromiel — Escuela de Cerveceros Artesanales">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUÉ INCLUYE ===== -->
+<section class="includes">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="kicker center">TU INVERSIÓN</span>
+      <h2 style="margin-top:10px">Incluye las siguientes <em>clases</em></h2>
+      <p class="lead center" style="margin-top:12px">5 clases completas + material descargable. De cero a hidromieles con carácter profesional.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card class-card reveal"><span class="class-num">01</span><span class="class-ico">🫙</span>
+        <h3>Elaboración de hidromiel básico</h3><p>Desde la selección de ingredientes hasta el embotellado. Tu fundamento completo paso a paso.</p></article>
+      <article class="card class-card reveal" style="transition-delay:.06s"><span class="class-num">02</span><span class="class-ico">⚗️</span>
+        <h3>Bioquímica de la hidromiel</h3><p>Comprende lo que ocurre en cada etapa de la fermentación y por qué.</p></article>
+      <article class="card class-card reveal" style="transition-delay:.12s"><span class="class-num">03</span><span class="class-ico">📝</span>
+        <h3>Diseño profesional de recetas</h3><p>Crea hidromieles únicas, balanceadas y con carácter propio.</p></article>
+      <article class="card class-card reveal" style="transition-delay:.18s"><span class="class-num">04</span><span class="class-ico">🌡️</span>
+        <h3>Control de la fermentación</h3><p>Logra estabilidad, calidad y el perfil deseado en cada lote.</p></article>
+      <article class="card class-card reveal" style="transition-delay:.24s"><span class="class-num">05</span><span class="class-ico">📂</span>
+        <h3>Adjuntos para hidromiel</h3><p>Guías, tablas, cálculos y material complementario descargable.</p></article>
+      <article class="card class-card reveal" style="transition-delay:.3s;border-style:dashed"><span class="class-ico">🎓</span>
+        <h3>Acceso de por vida</h3><p>Pago único. Avanza a tu ritmo, repite las clases cuando quieras, desde cualquier dispositivo.</p></article>
+    </div>
+    <div class="trust">
+      <div class="card trust-item reveal"><span class="t-ico">🏠</span><div><b>Aprende desde casa</b><small>Clases en línea, a tu ritmo</small></div></div>
+      <div class="card trust-item reveal" style="transition-delay:.06s"><span class="t-ico">📜</span><div><b>Material de alta calidad</b><small>Guías y tablas descargables</small></div></div>
+      <div class="card trust-item reveal" style="transition-delay:.12s"><span class="t-ico">🧠</span><div><b>Respaldo de expertos</b><small>Maestros cerveceros con +10 años</small></div></div>
+      <div class="card trust-item reveal" style="transition-delay:.18s"><span class="t-ico">🛡️</span><div><b>Inversión en conocimiento</b><small>Skills que quedan para siempre</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÉTODOS DE PAGO ===== -->
+<section class="pago" id="pago">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="kicker center">MÉTODOS DE PAGO</span>
+      <h2 style="margin-top:10px">Elige cómo <em>pagar</em> tu lugar</h2>
+      <p class="lead center" style="margin-top:12px">Depósito o transferencia <strong>BBVA</strong> (tarjeta o CLABE) o <strong>PayPal</strong>. Copia los datos con un toque.</p>
+    </div>
+
+    <div class="pay-grid">
+      <!-- Tarjeta -->
+      <article class="card pay-card featured reveal">
+        <span class="pay-ico">💳</span>
+        <h3>Depósito / transferencia BBVA</h3>
+        <span class="pay-label">Número de tarjeta</span>
+        <div class="pay-num">4152 3145 9813 3463</div>
+        <div class="copy-row">
+          <button class="copy-btn" type="button" data-copy="4152314598133463">📋 Copiar número</button>
+        </div>
+        <div class="holder">👤 Titular: <strong>Jose Guerrero Garfias</strong><br>🏦 Banco: <strong>BBVA</strong></div>
+      </article>
+
+      <!-- CLABE -->
+      <article class="card pay-card featured reveal" style="transition-delay:.08s">
+        <span class="pay-ico">🏦</span>
+        <h3>Transferencia con CLABE</h3>
+        <span class="pay-label">CLABE interbancaria</span>
+        <div class="pay-num">0120 7401 5586 6564 37</div>
+        <div class="copy-row">
+          <button class="copy-btn" type="button" data-copy="012074015586656437">📋 Copiar CLABE</button>
+        </div>
+        <div class="holder">👤 Titular: <strong>Jose Guerrero Garfias</strong><br>🏦 Banco: <strong>BBVA</strong></div>
+      </article>
+
+      <!-- PayPal -->
+      <article class="card pay-card reveal" style="transition-delay:.16s">
+        <span class="pay-ico">🅿️</span>
+        <h3>Pagar con PayPal</h3>
+        <p class="pay-meta">Pago seguro con tarjeta, saldo o transferencia desde tu cuenta PayPal. Acepta pagos internacionales.</p>
+        <a class="btn pp" href="https://www.paypal.com/ncp/payment/AXP5CEUTLCVHU" target="_blank" rel="noopener" style="margin-top:auto">🅿️ Pagar $1,000 MXN con PayPal</a>
+        <div class="holder">🔒 Enlace oficial de PayPal · abre en pestaña nueva</div>
+      </article>
+    </div>
+
+    <p class="pay-note center reveal">⚠️ <strong>Importante:</strong> después de pagar, envía tu <strong>comprobante de pago</strong>, tu <strong>nombre completo</strong> y tu <strong>email</strong> al WhatsApp <strong>492 134 4124</strong> para recibir tus accesos.</p>
+  </div>
+</section>
+
+<!-- ===== PASOS ===== -->
+<section>
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="kicker center">ASÍ DE FÁCIL</span>
+      <h2 style="margin-top:10px">Tres pasos y ya <em>estás dentro</em></h2>
+    </div>
+    <div class="steps">
+      <div class="card step reveal"><span class="s-num">1</span><h3>Realiza tu pago</h3><p>Depósito o transferencia BBVA (tarjeta o CLABE), o PayPal. Monto: <strong>$1,000 MXN</strong>.</p></div>
+      <div class="card step reveal" style="transition-delay:.08s"><span class="s-num">2</span><h3>Envía tus datos</h3><p>Manda por WhatsApp: <strong>comprobante de pago + nombre completo + email</strong> al <strong>492 134 4124</strong>.</p></div>
+      <div class="card step reveal" style="transition-delay:.16s"><span class="s-num">3</span><h3>Recibe tus accesos</h3><p>Confirmamos tu pago y te enviamos el acceso a las 5 clases y todo el material. ¡A fermentar! 🍯</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHATSAPP ===== -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="kicker center">ÚLTIMO PASO</span>
+      <h2 style="margin-top:10px">Envía tu comprobante por <em>WhatsApp</em></h2>
+    </div>
+    <div class="card wa-box reveal" style="transition-delay:.1s">
+      <span style="font-size:15px;color:var(--soft)">Escríbenos al</span>
+      <span class="wa-phone">📲 492 134 4124</span>
+      <p style="font-size:14.5px;color:var(--dim)">y adjunta lo siguiente:</p>
+      <div class="wa-send">
+        <div><span class="w-ico">🧾</span><b>Comprobante de pago</b><small>Captura o foto del ticket / transferencia</small></div>
+        <div><span class="w-ico">🪪</span><b>Nombre completo</b><small>Para registrar tu inscripción</small></div>
+        <div><span class="w-ico">📧</span><b>Email</b><small>Donde recibirás tus accesos</small></div>
+      </div>
+      <a class="btn xl wa" href="https://wa.me/524921344124?text=Hola!%20Le%20env%C3%ADo%20mi%20comprobante%20de%20pago%2C%20mi%20nombre%20completo%20y%20mi%20email%20para%20inscribirme%20al%20Paquete%20de%20Cursos%20de%20Hidromiel%20(%241%2C000%20MXN).%20%F0%9F%A7%BE" target="_blank" rel="noopener">💬 Abrir WhatsApp y enviar mis datos</a>
+      <p class="wa-note">🔒 Al abrir el chat, el mensaje ya viene escrito: solo adjunta tu comprobante y envía.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BANNER FINAL ===== -->
+<div class="final-banner reveal">
+  <h2>¡Inscríbete ahora y lleva tu pasión por la <em>hidromiel</em> al siguiente nivel!</h2>
+  <p style="color:var(--dim);font-size:14px;margin-bottom:20px">Oferta de asistentes: $1,000 MXN · válida solo hoy hasta las 10:30 PM</p>
+  <div class="cta-row" style="justify-content:center">
+    <a class="btn xl" href="#pago">💳 Ver métodos de pago</a>
+    <a class="btn xl wa" href="https://wa.me/524921344124?text=Hola!%20Quiero%20inscribirme%20al%20Paquete%20de%20Cursos%20de%20Hidromiel%20(%241%2C000%20MXN)." target="_blank" rel="noopener">💬 Escribir por WhatsApp</a>
+  </div>
+</div>
+
+<footer>
+  <div class="f-brand">ESCUELA DE CERVECEROS ARTESANALES</div>
+  <div>Capacitación · Ciencia · Pasión</div>
+  <div style="margin-top:8px">WhatsApp: 492 134 4124 · Tu conocimiento, tu mejor fermentación 🍯</div>
+</footer>
+
+<div id="toasts" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+function $(s){return document.querySelector(s);}
+function toast(msg,ms){
+  var t=document.createElement('div');t.className='toast';t.textContent=msg;
+  $('#toasts').appendChild(t);
+  setTimeout(function(){t.classList.add('out');setTimeout(function(){if(t.parentNode)t.parentNode.removeChild(t);},400);},ms||2400);
+}
+
+/* ===== Copiar datos de pago ===== */
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    var txt=b.getAttribute('data-copy');
+    var original=b.textContent;
+    function done(){
+      document.querySelectorAll('.copy-btn').forEach(function(x){x.classList.remove('copied');});
+      b.classList.add('copied');b.textContent='✓ ¡Copiado!';
+      toast('📋 Copiado: pégalo en tu app bancaria');
+      setTimeout(function(){b.classList.remove('copied');b.textContent=original;},2200);
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done).catch(fallback);
+    }else{fallback();}
+    function fallback(){
+      var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy');done();}catch(e){toast('⚠️ Copia manual: '+txt);}
+      document.body.removeChild(ta);
+    }
+  });
+});
+
+/* ===== Cuenta regresiva (hasta 10:30 PM hoy) ===== */
+function tick(){
+  try{
+    var end=new Date();end.setHours(22,30,0,0);
+    var now=new Date();
+    if(now>=end)end.setDate(end.getDate()+1);
+    var d=Math.max(0,end-now);
+    $('#cdH').textContent=String(Math.floor(d/3.6e6)).padStart(2,'0');
+    $('#cdM').textContent=String(Math.floor(d%3.6e6/6e4)).padStart(2,'0');
+    $('#cdS').textContent=String(Math.floor(d%6e4/1e3)).padStart(2,'0');
+  }catch(e){}
+}
+tick();setInterval(tick,1000);
+
+/* ===== Animaciones al hacer scroll ===== */
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+}else{
+  document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+}
+})();
+</script>
+</body>
+</html>
